@@ -1,0 +1,21 @@
+<div class="characters-content bg-light">
+    <div class="media p-3  border-bottom border-dark">
+    <img src="images/{{shortCode}}.jpg" class="mr-3 align-self-top" alt="{{name}}" />
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">{{upper name}}</h5>
+
+        <div>{{#makeBold}}Actor:{{/makeBold}} {{actor}}</div>
+        {{#with house}}
+        {{#if name }}<div>{{#makeBold}}House:{{/makeBold}} {{name}}</div>{{/if}}
+        {{#if seat}}<div>{{#makeBold}}Seat:{{/makeBold}} {{seat}}</div>{{/if}}
+        {{#if words}}<div>{{#makeBold}}Words:{{/makeBold}} {{words}}</div>{{/if}}
+        {{/with}}
+        {{#if location }}<div>{{#makeBold}}Whereabouts:{{/makeBold}} {{#toLower}}{{location}}{{/toLower}}</div>{{/if}}
+        {{#unless location}}<div>Whereabouts are unknown..</div>{{/unless}}
+        <a href="index.html" class="btn btn-secondary float-right">Back</a>
+    </div>
+</div>
+    <div class="p-3 border-top border-dark">
+        <p><strong>Bio: </strong>{{bio}}</p>
+    </div>
+</div>
